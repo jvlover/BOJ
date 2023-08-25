@@ -23,16 +23,17 @@ public class Main {
         System.out.print(sb);
     }
     static void combination(int idx, int vowel, int consonant) {
-        if (idx == C) {
-            if (vowel < 1 || consonant < 2 || vowel+consonant != L) return;
+        if (vowel+consonant == L) {
+            if (vowel < 1 || consonant < 2) return;
             for (int i = 0; i < C; ++i) if (visit[i]) sb.append(arr[i]);
             sb.append('\n');
             return;
         }
-        visit[idx] = true;
-        if (vowels.contains(arr[idx])) combination(idx+1, vowel+1, consonant);
-        else combination(idx+1, vowel, consonant+1);
-        visit[idx] = false;
-        combination(idx+1, vowel, consonant);
+        for (int i = idx; i < C; ++i) {
+            visit[i] = true;
+            if (vowels.contains(arr[i])) combination(i+1, vowel+1, consonant);
+            else combination(i+1, vowel, consonant+1);
+            visit[i] = false;
+        }
     }
 }
