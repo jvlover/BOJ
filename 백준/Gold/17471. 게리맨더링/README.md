@@ -30,6 +30,7 @@
 			<td style="width: 25%; text-align: center;"><img alt="" src="https://upload.acmicpc.net/f5dd6143-c013-46d3-ba4c-dadc48bdf5bc/-/preview/" style="width: 220px; height: 195px;"></td>
 			<td style="width: 25%; text-align: center;"><img alt="" src="https://upload.acmicpc.net/548b1153-84de-4b85-9697-2561b019a02b/-/preview/" style="width: 220px; height: 195px;"></td>
 		</tr>
+		
 		<tr>
 			<td style="width: 25%; text-align: center;">
 			<p>가능한 방법</p>
