@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < N; ++i) arr[i] = Integer.parseInt(st.nextToken());
         List<Integer> list = new ArrayList<>();
         for (int i = N-1; i >= 0; --i) list.add(arr[i], i+1);
-        list.forEach(i -> sb.append(i).append(' '));
+        for (int i : list) sb.append(i).append(' ');
         System.out.print(sb);
     }
 }
