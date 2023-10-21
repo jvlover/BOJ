@@ -31,6 +31,5 @@ public class Main {
         } else visit[idx] = true;
         if (!team[arr[idx]]) dfs(arr[idx]);
         team[idx] = true;
-        visit[idx] = false;
     }
 }
