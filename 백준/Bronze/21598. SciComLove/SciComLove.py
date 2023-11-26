@@ -1,1 +1,1 @@
-print('SciComLove\n'*int(input()))
+print('SciComLove '*int(input()))
