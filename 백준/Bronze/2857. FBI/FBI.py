@@ -1,0 +1,1 @@
+print(*[i for i in '12345' if 'FBI' in input()] or ['HE GOT AWAY!'])
