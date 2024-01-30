@@ -15,6 +15,6 @@ public class Main {
             if (cnt >= K) start = mid+1;
             else end = mid-1;
         }
-        System.out.print(start-1);
+        System.out.print(end);
     }
 }
