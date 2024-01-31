@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n, s = input().split()
+    if s == "kg":
+        print("%.4f lb" % (float(n)*2.2046))
+    elif s == "lb":
+        print("%.4f kg" % (float(n)*0.4536))
+    elif s == "l":
+        print("%.4f g" % (float(n)*0.2642))
+    elif s == "g":
+        print("%.4f l" % (float(n)*3.7854))
