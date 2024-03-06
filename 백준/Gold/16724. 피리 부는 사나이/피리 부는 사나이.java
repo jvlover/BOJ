@@ -11,22 +11,7 @@ public class Main {
         map = new int[N][M];
         for (int i = 0; i < N; ++i) {
             String s = br.readLine();
-            for (int j = 0; j < M; ++j) {
-                switch (s.charAt(j)) {
-                    case 'U':
-                        map[i][j] = 0;
-                        break;
-                    case 'D':
-                        map[i][j] = 1;
-                        break;
-                    case 'L':
-                        map[i][j] = 2;
-                        break;
-                    case 'R':
-                        map[i][j] = 3;
-                        break;
-                }
-            }
+            for (int j = 0; j < M; ++j) map[i][j] = "UDLR".indexOf(s.charAt(j));
         }
         visit = new boolean[N][M];
         isCycle = new boolean[N][M];
