@@ -1,0 +1,1 @@
+print(2 if eval(input().replace(' ','+'))>4 else 1)
