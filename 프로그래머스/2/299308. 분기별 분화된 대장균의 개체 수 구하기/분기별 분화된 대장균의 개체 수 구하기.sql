@@ -1,9 +1,7 @@
-SELECT (CASE 
-        WHEN MONTH(DIFFERENTIATION_DATE) BETWEEN 1 AND 3 THEN '1Q'
-        WHEN MONTH(DIFFERENTIATION_DATE) BETWEEN 4 AND 6 THEN '2Q'
-        WHEN MONTH(DIFFERENTIATION_DATE) BETWEEN 7 AND 9 THEN '3Q'
-        WHEN MONTH(DIFFERENTIATION_DATE) BETWEEN 10 AND 12 THEN '4Q'
-        END) QUARTER, COUNT(*) ECOLI_COUNT
-FROM ECOLI_DATA
-GROUP BY QUARTER
-ORDER BY QUARTER
+select concat(quarter(differentiation_date),'Q') quarter, count(*) ecoli_count
+from ecoli_data
+group by quarter
+
+-- mssql도 문자열 붙이기 concat (여러개도 가능)
+-- date 관련해서 연월일이나 분기 뽑아내는건 DATENAME(year, differentiation_date)
+-- DATENAME(quarter, differentiation_date) 이런 식으로
